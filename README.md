@@ -173,6 +173,6 @@ Usage: <class_name>.update(<\_id>, <dictionary>)
 
 <center> <h1>ALX</h1> </center>
 
-##### Personal informtions
+##### Personal informations
 
 Full Name: Chahid Anas
