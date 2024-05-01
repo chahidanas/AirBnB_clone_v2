@@ -1,20 +1,11 @@
 #!/usr/bin/python3
-"""modules imported"""
-from models.base_model import Base
-from models.base_model import BaseModel
-from sqlalchemy import Column
-from sqlalchemy import ForeignKey
-from sqlalchemy import String
-from sqlalchemy.orm import relationship
+""" City Module for HBNB project """
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, ForeignKey, String
 
 
 class City(BaseModel, Base):
-    """class for City
-    Attributes:
-        state_id: The state id
-        name: input
-    """
-    __tablename__ = "cities"
+    """ The city class, contains state ID and name """
+    __tablename__ = 'cities'    
     name = Column(String(128), nullable=False)
-    state_id = Column(String(60), ForeignKey("states.id"), nullable=False)
-    places = relationship("Place", backref="cities", cascade="delete")
+    state_id = Column(String(128), ForeignKey('states.id'), nullable=False)
