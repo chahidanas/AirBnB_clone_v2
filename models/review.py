@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-"""modules imported"""
-from models.base_model import Base
-from models.base_model import BaseModel
-from sqlalchemy import Column
-from sqlalchemy import ForeignKey
-from sqlalchemy import String
-from sqlalchemy.orm import relationship
+"""This is the review class"""
+from sqlalchemy.ext.declarative import declarative_base
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, Integer, String, ForeignKey, Float
 
 
 class Review(BaseModel, Base):
-    """class for Review
+    """This is the class for Review
     Attributes:
         place_id: place id
         user_id: user id

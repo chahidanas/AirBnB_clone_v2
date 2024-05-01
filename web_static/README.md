@@ -1,1 +1,1 @@
-This directory implements web design.
+web_static
