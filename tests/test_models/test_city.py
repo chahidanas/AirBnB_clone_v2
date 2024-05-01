@@ -1,14 +1,43 @@
 #!/usr/bin/python3
-"""test for city"""
-import unittest
-import os
+""" """
+from tests.test_models.test_base_model import test_basemodel
+import pycodestyle
 from models.city import City
-from models.base_model import BaseModel
-import pep8
+
+
+class test_City(test_basemodel):
+    """ """
+
+    def __init__(self, *args, **kwargs):
+        """ """
+        super().__init__(*args, **kwargs)
+        self.name = "City"
+        self.value = City
+
+    def test_state_id(self):
+        """ """
+        nw = self.value()
+        self.assertEqual(type(nw.state_id), str)
+
+    def test_name(self):
+        """ """
+        nw = self.value()
+        self.assertEqual(type(nw.name), str)
+
+
+class Test_PEP8(unittest.TestCase):
+    """User test"""
+
+    def test_pep8_user(self):
+        """Pep8 style test"""
+        pep8sty = pycodestyle.StyleGuide(quiet=True)
+        res = pep8sty.check_files(['models/city.py'])
+        self.assertEqual(res.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
 
 class TestCity(unittest.TestCase):
-    """this will test the city class"""
+    """City class X testd"""
 
     @classmethod
     def setUpClass(cls):
@@ -30,10 +59,10 @@ class TestCity(unittest.TestCase):
             pass
 
     def test_pep8_City(self):
-        """Tests pep8 style"""
+        """Pep8 style test"""
         style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['models/city.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
+        pep = style.check_files(['models/city.py'])
+        self.assertEqual(pep.total_errors, 0, "fix pep8")
 
     def test_checking_for_docstring_City(self):
         """checking for docstrings"""
