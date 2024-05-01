@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-""" State Module for HBNB project """
-from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String
+"""modules imported"""
+from models.base_model import Base
+from models.base_model import BaseModel
+from sqlalchemy import Column
+from sqlalchemy import String
 from sqlalchemy.orm import relationship
-from os import getenv
-
-storage_type = getenv("HBNB_TYPE_STORAGE")
 
 
 class Amenity(BaseModel, Base):
-    """ documment doc """
-    __tablename__ = 'amenities'
-    if storage_type == 'db':
-        name = Column(String(128), nullable=False)
-        place_amenities = relationship('Place', secondary='place_amenity',
-                                       back_populates="amenities")
-    else:
-        name = ""
+    """class for Amenity
+    Attributes
+    """
+    __tablename__ = "amenities"
+    name = Column(String(128), nullable=False)
+    place_amenities = relationship("Place", secondary="place_amenity",
+                                   viewonly=False)

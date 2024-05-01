@@ -1,8 +1,6 @@
-__pycache__/
-file.json
-tests/__pycache__/
-tests/test_models/__pycache__/
-tests/test_models/test_engine/__pycache__/
-models/__pycache__/
-models/engine/__pycache__/
-*.txt
+__pycache__
+file.txt
+myvenv
+question.txt
+info.log
+.venv
