@@ -15,5 +15,5 @@ class test_state(test_basemodel):
 
     def test_name3(self):
         """ """
-        nw = self.value()
-        self.assertEqual(type(nw.name), str)
+        new = self.value()
+        self.assertEqual(type(new.name), str)

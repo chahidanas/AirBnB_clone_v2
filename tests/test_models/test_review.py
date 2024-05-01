@@ -15,15 +15,15 @@ class test_review(test_basemodel):
 
     def test_place_id(self):
         """ """
-        nw = self.value()
-        self.assertEqual(type(nw.place_id), str)
+        new = self.value()
+        self.assertEqual(type(new.place_id), str)
 
     def test_user_id(self):
         """ """
-        nw = self.value()
-        self.assertEqual(type(nw.user_id), str)
+        new = self.value()
+        self.assertEqual(type(new.user_id), str)
 
     def test_text(self):
         """ """
-        nw = self.value()
-        self.assertEqual(type(nw.text), str)
+        new = self.value()
+        self.assertEqual(type(new.text), str)
